@@ -1,0 +1,11 @@
+row_id,arrival_date,hotel,market_segment,lead_time,lead_band,total_nights,is_canceled,reservation_status,probability,flagged,rule_score,rule_flagged,error,arrival_month
+H1:33925,2017-01-10,Resort Hotel,Online TA,71,31-90 days,56,0,Check-Out,0.9210683721954154,True,0.0,False,False positive,2017-01
+H1:33621,2017-01-24,Resort Hotel,Direct,88,31-90 days,35,0,Check-Out,0.6114606597626256,True,0.0,False,False positive,2017-01
+H1:34899,2017-02-26,Resort Hotel,Offline TA/TO,150,91-180 days,42,0,Check-Out,0.4829160612510647,True,1.0,True,False positive,2017-02
+H1:35060,2017-03-05,Resort Hotel,Groups,80,31-90 days,38,0,Check-Out,0.44588312852672185,True,0.0,False,False positive,2017-03
+H1:14040,2017-07-01,Resort Hotel,Direct,74,31-90 days,30,0,Check-Out,0.4054422698581002,True,0.0,False,False positive,2017-07
+H2:33489,2017-08-26,City Hotel,Offline TA/TO,458,181+ days,1,1,Canceled,0.0015527487156904915,False,1.0,True,False negative,2017-08
+H1:13321,2017-08-09,Resort Hotel,Offline TA/TO,184,181+ days,5,1,Canceled,0.002651232141741757,False,1.0,True,False negative,2017-08
+H1:11444,2017-05-08,Resort Hotel,Groups,217,181+ days,7,1,Canceled,0.0032446669122040365,False,1.0,True,False negative,2017-05
+H1:13394,2017-08-13,Resort Hotel,Offline TA/TO,166,91-180 days,7,1,No-Show,0.003417639659204727,False,1.0,True,False negative,2017-08
+H1:36838,2017-05-31,Resort Hotel,Offline TA/TO,258,181+ days,6,1,No-Show,0.0034355597279684988,False,1.0,True,False negative,2017-05

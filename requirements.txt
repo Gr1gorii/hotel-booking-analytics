@@ -1,0 +1,8 @@
+-e .
+pandas==2.3.3
+numpy==2.3.5
+scikit-learn==1.8.0
+streamlit==1.63.0
+plotly==6.9.0
+pyarrow==23.0.1
+joblib==1.6.0

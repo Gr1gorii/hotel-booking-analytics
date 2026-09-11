@@ -1,0 +1,33 @@
+field,decision,reason
+is_canceled,Target,Final outcome; includes no-shows
+lead_time,Use,Arrival minus PMS entry date at the documented snapshot
+arrival_date_year,Split only,Calendar year; split uses the derived prediction date
+arrival_date_month,Use as arrival_month,Known scheduled arrival calendar at D-1
+arrival_date_week_number,Omit,Redundant with month and weekday for this small model
+arrival_date_day_of_month,Derive weekday,Used to construct arrival_date and arrival_weekday
+stays_in_weekend_nights,Use,Booked stay at the documented snapshot; no initial-version guarantee
+stays_in_week_nights,Use,Booked stay at the documented snapshot; no initial-version guarantee
+adults,Use,Guest count at the documented snapshot
+children,Use,Guest count at snapshot; missing values imputed using train only
+babies,Use,Guest count at the documented snapshot
+meal,Use,Booked meal at snapshot; Undefined and SC both mean no meal package
+country,Omit,Not needed for the baseline; origin may proxy customer mix
+market_segment,Use,Booking segment at the documented snapshot
+distribution_channel,Use,Booking channel at the documented snapshot
+is_repeated_guest,Use,Source uses profile creation before the booking was created
+previous_cancellations,Omit,Earlier booking IDs do not prove their final outcomes were known at cutoff
+previous_bookings_not_canceled,Omit,Historical final outcome timing cannot be independently reconstructed
+reserved_room_type,Use,Reserved category at the documented snapshot
+assigned_room_type,Omit,Operational assignment can change; unnecessary for conservative model
+booking_changes,Omit,Source counts amendments through check-in or cancellation
+deposit_type,Omit,Derived from payments before arrival or cancellation; not initial rate policy
+agent,Omit,Anonymous high-cardinality identifier; portability and small-group concerns
+company,Omit,Anonymous high-cardinality identifier with many missing values
+days_in_waiting_list,Omit,Engineered waiting duration; exact history not available
+customer_type,Omit,Association to other bookings may change; conservative scope
+adr,Omit,Derived using lodging transactions; quoted price at cutoff not guaranteed
+required_car_parking_spaces,Omit,Optional operational input; exact update history not independently verified
+total_of_special_requests,Omit,Sum of requests; full request timing unavailable
+reservation_status,Exclude: leakage,Final status directly exposes the target
+reservation_status_date,Cohort/split only,Final status date defines eligibility and label maturity; never a predictor
+hotel,Use,Known property identity; only two properties in this dataset

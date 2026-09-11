@@ -1,0 +1,9 @@
+hotel,timing,cancellations
+City Hotel,1-7 days before,3315
+City Hotel,31+ days before,21588
+City Hotel,8-30 days before,6728
+City Hotel,Arrival day,1471
+Resort Hotel,1-7 days before,939
+Resort Hotel,31+ days before,6928
+Resort Hotel,8-30 days before,2639
+Resort Hotel,Arrival day,616

@@ -1,0 +1,71 @@
+{
+  "selected_model": "Logistic regression",
+  "threshold": 0.03847284425226833,
+  "features": [
+    "lead_time",
+    "arrival_month",
+    "arrival_weekday",
+    "stays_in_weekend_nights",
+    "stays_in_week_nights",
+    "adults",
+    "children",
+    "babies",
+    "is_repeated_guest",
+    "hotel",
+    "meal",
+    "market_segment",
+    "distribution_channel",
+    "reserved_room_type"
+  ],
+  "selection_metric": "Validation average precision",
+  "splits": [
+    {
+      "split": "Train",
+      "rows": 27050,
+      "positives": 720,
+      "rate": 0.026617375231053605,
+      "arrival_start": "2015-07-01",
+      "arrival_end": "2016-06-30",
+      "prediction_start": "2015-06-30",
+      "prediction_end": "2016-06-29"
+    },
+    {
+      "split": "Validation",
+      "rows": 16596,
+      "positives": 293,
+      "rate": 0.017654856591949868,
+      "arrival_start": "2016-07-02",
+      "arrival_end": "2016-12-31",
+      "prediction_start": "2016-07-01",
+      "prediction_end": "2016-12-30"
+    },
+    {
+      "split": "Test",
+      "rows": 22639,
+      "positives": 468,
+      "rate": 0.020672291178938998,
+      "arrival_start": "2017-01-02",
+      "arrival_end": "2017-08-31",
+      "prediction_start": "2017-01-01",
+      "prediction_end": "2017-08-30"
+    }
+  ],
+  "eligible_rows": 67211,
+  "labels_not_yet_available_excluded": 926,
+  "unique_test_sensitivity": {
+    "rows": 19317,
+    "cancellations": 382,
+    "prevalence": 0.019775327431795827,
+    "average_precision": 0.02668643759851495,
+    "roc_auc": 0.5629434259114606,
+    "brier_score": 0.02001503063035175,
+    "precision": 0.02439512097580484,
+    "recall": 0.3193717277486911,
+    "review_rate": 0.2588911321633794,
+    "true_positive": 122,
+    "false_positive": 4879,
+    "false_negative": 260,
+    "true_negative": 14056
+  },
+  "interval_method": "200 bootstrap samples of arrival dates, 95% percentile interval; two hotels only"
+}

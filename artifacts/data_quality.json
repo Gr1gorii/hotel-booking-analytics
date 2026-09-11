@@ -1,0 +1,31 @@
+{
+  "raw_rows": 119390,
+  "hotel_counts": {
+    "City Hotel": 79330,
+    "Resort Hotel": 40060
+  },
+  "duplicate_rows": 31994,
+  "zero_nights": 715,
+  "no_guests": 180,
+  "adr_flagged": 2,
+  "missing_before_cleaning": {
+    "Children": 4,
+    "Country": 488
+  },
+  "cohort_waterfall": {
+    "Eligible": 67211,
+    "Already canceled before D-1": 41500,
+    "Created on D-1 or arrival day": 9393,
+    "No overnight stay or no guests": 825,
+    "Canceled on D-1, time unknown": 461
+  },
+  "eligible_rows": 67211,
+  "eligible_cancellations": 1489,
+  "all_cancellations": 44224,
+  "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6297060/supplementaryFiles",
+  "sha256": {
+    "H1.csv": "6f38fda13794fd6cf6547d2432ffb79666200000eb45fd09e4b97fe49519a6ab",
+    "H2.csv": "5107090ffdc5585a9e18299801e9d85c3b459c235542882183a502a73ef63c4d"
+  },
+  "prepared_at_utc": "2026-09-11T15:02:04.133083+00:00"
+}

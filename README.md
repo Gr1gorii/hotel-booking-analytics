@@ -2,6 +2,8 @@
 
 Booking patterns, cancellation risk and insights for hotel management.
 
+Live app: [Hotel Booking Intelligence](https://gr1gorii-hotel-booking.streamlit.app/)
+
 An analysis of **119,390 hotel bookings**: when guests plan to arrive, which bookings get canceled,
 and whether the remaining cancellations can be identified before check-in.
 
@@ -120,7 +122,9 @@ uv run streamlit run app.py
 The alternative pip setup is `pip install -r requirements.txt` in a Python 3.12 virtual environment.
 `uv.lock` contains the full reproducible dependency lock. Raw data, the local database, predictions
 and the fitted model are generated locally and excluded from Git. Small result tables and screenshots
-are included so the analysis can be reviewed without running it.
+are included so the analysis can be reviewed without running it. The public dashboard reads the
+prepared booking and prediction snapshots in `demo/` when the locally generated files are absent.
+These snapshots use the authors' anonymized source data, credited in [Data notes](docs/data_notes.md).
 
 ## Project layout
 

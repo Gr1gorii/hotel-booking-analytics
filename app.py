@@ -13,6 +13,13 @@ import streamlit as st
 sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 from hotel_booking.prepare import ROOT  # noqa: E402
 
+BOOKINGS = ROOT / "data/processed/bookings.parquet"
+if not BOOKINGS.exists():
+    BOOKINGS = ROOT / "demo/bookings.parquet"
+PREDICTIONS = ROOT / "artifacts/test_predictions.parquet"
+if not PREDICTIONS.exists():
+    PREDICTIONS = ROOT / "demo/test_predictions.parquet"
+
 st.set_page_config(page_title="Hotel Booking Intelligence", page_icon="🏨", layout="wide")
 st.html("""
 <style>
@@ -39,7 +46,7 @@ LEAD_ORDER = ["0-7 days", "8-30 days", "31-90 days", "91-180 days", "181+ days"]
 
 @st.cache_data
 def load_data():
-    return pd.read_parquet(ROOT / "data/processed/bookings.parquet")
+    return pd.read_parquet(BOOKINGS)
 
 
 def chart(fig, percent=False):
@@ -81,7 +88,7 @@ st.caption(
     "Booking demand, channel differences and late cancellation risk | Portugal, July 2015 to August 2017"
 )
 
-if not (ROOT / "data/processed/bookings.parquet").exists():
+if not BOOKINGS.exists():
     st.info("The dataset has not been prepared yet. Follow the two setup commands in the README.")
     st.code("python run.py prepare\npython run.py train", language="bash")
     st.stop()
@@ -289,7 +296,7 @@ with model_tab:
     else:
         meta = json.loads((ROOT / "artifacts/model_metadata.json").read_text())
         metrics = pd.read_csv(ROOT / "artifacts/model_metrics.csv")
-        predictions = pd.read_parquet(ROOT / "artifacts/test_predictions.parquet")
+        predictions = pd.read_parquet(PREDICTIONS)
         st.subheader("Can we identify the remaining late cancellations?")
         st.markdown(
             "The prediction point is the end of the day before arrival. Bookings already canceled, cancellations recorded on that day and bookings created too late are excluded. The target includes arrival-day cancellations and no-shows."

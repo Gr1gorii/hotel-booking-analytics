@@ -2,7 +2,7 @@
 
 Booking patterns, cancellation risk and insights for hotel management.
 
-Live app: [Hotel Booking Intelligence](https://gr1gorii-hotel-booking.streamlit.app/)
+Live app: [Hotel Booking Intelligence](https://gr1gorii-hotel-booking.streamlit.app/) · [Open dashboard](https://gr1gorii-hotel-booking.streamlit.app/~/+/)
 
 An analysis of **119,390 hotel bookings**: when guests plan to arrive, which bookings get canceled,
 and whether the remaining cancellations can be identified before check-in.
